@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudknight
+  labels:
+    app: cloudknight
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudknight
+  template:
+    metadata:
+      labels:
+        app: cloudknight
+    spec:
+      containers:
+        - name: cloudknight
+          image: cloudopsknight/cloudknight:<tag>
+          ports:
+            - containerPort: 8080
