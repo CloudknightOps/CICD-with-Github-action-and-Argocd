@@ -33,7 +33,7 @@ jobs:
           context: .
           file: src/Dockerfile
           push: true
-          tags: cloudopsknight/cloudknight:latest, cloudopsknight/cloudknight:${{ github.sha }}, cloudopsknight/cloudknight:${{ now().format('%Y%m%d-%H%M%S') }}
+          tags: cloudopsknight/cloudknight:latest, cloudopsknight/cloudknight:${{ github.sha }}
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
