@@ -73,32 +73,7 @@ jobs:
       with:
         branch: "master"
       env:
-        github_token: ${{ secrets.GH_PAT }}
+        github_token: ${{ secrets.GITHUB_TOKEN}}
 
-    - name: Set file permissions
-      run: chmod 777 deployment.yml
-
-    - name: Update Deployment YAML
-      run: |
-        sed -i "s/image:.*$/image: cloudopsknight\/cloudknight:${{ steps.tag.outputs.tag }}/g" deployment.yml
-        cat deployment.yml
-      env:
-        github_token: ${{ secrets.GH_PAT }}
-        
-    - name: Commit changes
-      run: |
-        git config --global user.email "ci-bot@argocd.com"
-        git config --global user.name "ci-bot"
-        git add deployment.yml    
-        git commit -m "Update image tag [skip ci]"
-      env:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        branch: "master"
-      env:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
 
       
