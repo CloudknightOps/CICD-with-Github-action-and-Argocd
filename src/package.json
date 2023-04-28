@@ -2,7 +2,7 @@
   "name": "github_argocd_webapp",
   "version": "1.0.0",
   "description": "Node.js on Docker",
-  "author": "Theooo <uviekugbere.theo@gmail.com>",
+  "author": "Theophilus Uviekugbere <uviekugbere.theo@gmail.com>",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
