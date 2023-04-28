@@ -46,7 +46,7 @@ jobs:
       run: echo ::set-output name=tag::${{ github.sha }}
       
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       
       
     - name: Set file permissions
@@ -66,14 +66,12 @@ jobs:
         git add deployment.yml    
         git commit -m "Update image tag [skip ci]"
       env:
-        github_token: ${{ secrets.GH_PAT }}
+        github_token: ${{ secret.GITHUB_TOKEN}}
         
     - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
+      uses: ad-m/github-push-action@master
       with:
-        branch: "master"
-      env:
         github_token: ${{ secrets.GITHUB_TOKEN}}
-
+        branch: ${{ github.ref }}
 
       
