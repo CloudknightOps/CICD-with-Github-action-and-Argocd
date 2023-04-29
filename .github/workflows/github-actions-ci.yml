@@ -55,7 +55,7 @@ jobs:
     - name: Update Deployment YAML
       run: |
         sed -i "s/image:.*$/image: cloudopsknight\/cloudknight:${{ steps.tag.outputs.tag }}/g" deploy/deployment.yml
-        cat deployment.yml
+        cat deploy/deployment.yml
       env:
         github_token: ${{ secrets.GH_PAT }}
         
@@ -63,7 +63,7 @@ jobs:
       run: |
         git config --global user.email "ci-bot@argocd.com"
         git config --global user.name "ci-bot"
-        git add deployment.yml    
+        git add deploy/deployment.yml    
         git commit -m "Update image tag [skip ci]"
       env:
         github_token: ${{ secrets.GH_PAT}}
