@@ -9,7 +9,7 @@ spec:
   source: 
     repoURL: https://github.com/CloudknightOps/CICD-with-Github-action-and-Argocd
     targetRevision: HEAD
-    path: /
+    path: deploy
   destination: 
     server: https://kubernetes.default.svc
     namespace: cloudknight-ops
