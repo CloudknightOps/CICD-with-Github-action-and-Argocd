@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cloudknight-argo-application
+  namespace: argocd 
+spec:
+  project: default
+
+  source: 
+    repoURL: https://github.com/CloudknightOps/CICD-with-Github-action-and-Argocd
+    targetRevision: HEAD
+    path: deploy
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: cloudknight-ops
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true 
+      prune: true
