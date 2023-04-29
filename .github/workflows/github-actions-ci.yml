@@ -50,7 +50,7 @@ jobs:
       
       
     - name: Set file permissions
-      run: chmod 777 deployment.yml
+      run: chmod 777 deploy/deployment.yml
 
     - name: Update Deployment YAML
       run: |
