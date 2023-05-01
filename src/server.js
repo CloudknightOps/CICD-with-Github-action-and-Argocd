@@ -19,7 +19,7 @@ const ENV = 'DEV';
 const app = express();
 app.get('/', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Hey friend, Welcome to first webapp v1';
+  const msg = 'Welcome to V2... Do you like what you see';
   res.send(getPage(msg));
 });
 
