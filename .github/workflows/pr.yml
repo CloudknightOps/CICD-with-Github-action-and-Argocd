@@ -61,8 +61,8 @@ jobs:
         
     - name: Commit changes
       run: |
-        git config --global user.email "ci-bot@argocd.com"
-        git config --global user.name "ci-bot"
+        git config --global user.email "cloudraiders@argocd.com"
+        git config --global user.name "cloudraider"
         git add deploy/deployment.yml    
         git commit -m "Update image tag [skip ci]"
       env:
@@ -72,7 +72,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GH_PAT}}
-        branch: ${{ github.ref }}
+        branch: ${{ github.event.pull_request.head.ref }}
   add_labels:
     runs-on: ubuntu-latest
     needs: update-deployment
