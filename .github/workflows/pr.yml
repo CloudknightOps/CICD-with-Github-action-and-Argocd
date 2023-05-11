@@ -47,7 +47,9 @@ jobs:
       
     - name: Checkout code
       uses: actions/checkout@v3
-      
+     
+    - name: Pull latest changes
+      run: git pull origin ${{ github.event.pull_request.head.ref }}
       
     - name: Set file permissions
       run: chmod 777 deploy/deployment.yml
