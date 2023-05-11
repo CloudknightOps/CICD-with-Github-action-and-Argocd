@@ -8,13 +8,13 @@ spec:
   - pullRequest:
       github:
         owner: cloudknight
-        repo: argocd-course-webapp
+        repo: https://github.com/CloudknightOps/CICD-with-Github-action-and-Argocd
         labels:
         - preview
       requeueAfterSeconds: 90
   template:
     metadata:
-      name: 'webapp-{{branch}}-{{number}}'
+      name: 'cloudraiders-{{branch}}-{{number}}'
       namespace: cloudraiders-mount
     spec:
       source:
