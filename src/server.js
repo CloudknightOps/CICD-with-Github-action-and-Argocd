@@ -19,7 +19,7 @@ const ENV = 'PROD';
 const app = express();
 app.get('/', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Welcome to V2... We are Testing out The Argocd PR gen';
+  const msg = 'Welcome to V2... Testing out PR gen';
   res.send(getPage(msg));
 });
 
