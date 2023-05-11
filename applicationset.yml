@@ -7,8 +7,8 @@ spec:
   generators:
   - pullRequest:
       github:
-        owner: cloudknight
-        repo: https://github.com/CloudknightOps/CICD-with-Github-action-and-Argocd
+        owner: CloudKnightOps
+        repo: CICD-with-Github-action-and-Argocd
         labels:
         - preview
       requeueAfterSeconds: 90
