@@ -7,11 +7,8 @@ spec:
   generators:
   - pullRequest:
       github:
-        # The GitHub organization or user.
         owner: cloudknight
-        # The Github repository
         repo: argocd-course-webapp
-        # Labels is used to filter the PRs that you want to target. (optional)
         labels:
         - preview
       requeueAfterSeconds: 90
