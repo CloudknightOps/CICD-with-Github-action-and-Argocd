@@ -85,7 +85,7 @@ function getPage(message) {
     + "    <p>ENVIRONMENT: " + ENV + "</p>\n"
     + "  </div>\n"
     + "  <div class=\"middle\">\n"
-    + "    <h1>Welcome to the CloudKnight Clan, where the least of us is Cloudraider</h1>\n"
+    + "    <h1>Welcome to the CloudKnight Clan, we are the Cloudraiders....</h1>\n"
     + "    <hr>\n"
     + "    <p>" + OS.hostname() + "</p>\n"
     + "  </div>\n"
