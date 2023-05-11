@@ -1,9 +1,8 @@
 name: Github CICD pipeline job
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
+
 
 jobs:
   build-test:

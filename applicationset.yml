@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cloudraiders
+  namespace: argocd
+spec:
+  generators:
+  - pullRequest:
+      github:
+        # The GitHub organization or user.
+        owner: cloudknight
+        # The Github repository
+        repo: argocd-course-webapp
+        # Labels is used to filter the PRs that you want to target. (optional)
+        labels:
+        - preview
+      requeueAfterSeconds: 90
+  template:
+    metadata:
+      name: 'webapp-{{branch}}-{{number}}'
+      namespace: cloudraiders-mount
+    spec:
+      source:
+        repoURL: 'https://github.com/CloudknightOps/CICD-with-Github-action-and-Argocd.git'
+        targetRevision: '{{head_sha}}'
+        path: deploy
+      project: "default"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: cloudraiders-{{branch}}-{{number}}
+      syncPolicy:
+         syncOptions:
+          - CreateNamespace=true
