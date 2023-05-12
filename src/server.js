@@ -19,7 +19,7 @@ const ENV = 'PROD';
 const app = express();
 app.get('/', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Welcome to V2... Testing out PR gen, we dont take Nos for answers';
+  const msg = 'Welcome to V5..... Testing out PRs, We are Vikings';
   res.send(getPage(msg));
 });
 
@@ -85,7 +85,7 @@ function getPage(message) {
     + "    <p>ENVIRONMENT: " + ENV + "</p>\n"
     + "  </div>\n"
     + "  <div class=\"middle\">\n"
-    + "    <h1>Welcome to the CloudKnight Clan, we are the Cloudraiders, we are strong </h1>\n"
+    + "    <h1>Welcome to the CloudKnight clan, we are the cloudlords</h1>\n"
     + "    <hr>\n"
     + "    <p>" + OS.hostname() + "</p>\n"
     + "  </div>\n"
