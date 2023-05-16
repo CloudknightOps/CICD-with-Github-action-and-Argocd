@@ -35,6 +35,22 @@
               elements:
               - url: https://github.com/CloudknightOps/Dynamic-PR-test
                 path: helm/webapp
+      - matrix:
+          generators:
+          - pullRequest:
+              github:
+                # The GitHub organization or user.
+                owner: CloudknightOps
+                # The Github repository
+                repo:  Pull-request-test
+                labels:
+                - preview
+              requeueAfterSeconds: 90
+          - list:
+              elements:
+              - url: https://github.com/CloudknightOps/Pull-request-test
+                path: deploy
+                
       template:
           metadata:
             name: 'cloudraider-{{branch}}-{{number}}'
