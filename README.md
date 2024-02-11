@@ -85,6 +85,8 @@ Reference Image
 
 The ArgoCD application file (deploy/application.yml) configures ArgoCD to track this repository. It specifies the source repository, target revision, path to deployment files, and the destination Kubernetes namespace watch.
 
+![argcd](argocd .png)
+
   ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -109,7 +111,7 @@ spec:
 ```
 This configuration ensures that the specified GitHub repository is tracked, and changes trigger automated deployment to the specified Kubernetes cluster and namespace using ArgoCD.
 
-
+![static-webapp](static-website.png)
 ## Conclusion 
 
 In conclusion, this CI/CD pipeline using GitHub Actions and ArgoCD provides a seamless and automated workflow for building, testing, and deploying a static web application. GitHub Actions efficiently handles the CI part, automating tasks from initial build to Docker image creation, while ArgoCD takes care of continuous deployment to a Kubernetes cluster.
