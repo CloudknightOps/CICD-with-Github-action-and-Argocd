@@ -1,3 +1,4 @@
+
 # GitOps with GitHub Actions and ArgoCD.
 
 ## Overview
@@ -114,7 +115,6 @@ In conclusion, this CI/CD pipeline using GitHub Actions and ArgoCD provides a se
 The GitHub Actions workflow is well-structured, comprising jobs that cover testing, Docker image creation, deployment updates, and pull request labeling. This setup ensures a streamlined and effective development process.
 
 ArgoCD integration further strengthens the pipeline, automating deployment processes and maintaining consistency across the Kubernetes cluster. The provided ArgoCD configuration file makes it easy to track and deploy changes from the GitHub repository.
-
 
 
 
