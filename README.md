@@ -31,6 +31,8 @@ This document provides a detailed explanation of the GitHub Actions workflow def
 
 The workflow is organized into multiple jobs, each responsible for specific tasks in the CI/CD process.
 
+![ga.workflow](gitops-with-ga-and-argocd.png)
+
 ### 1. **build-test Job**
 
 - **Purpose:** Executes on pull requests to the `master` branch and performs initial build and test operations.
