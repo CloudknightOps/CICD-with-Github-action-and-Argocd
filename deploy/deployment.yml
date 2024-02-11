@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: cloudknight
-          image: cloudopsknight/cloudknight:cfcf66b38da1d5f7460df480885d663ac5b357f2
+          image: cloudopsknight/cloudknight:69e583310e8120658cc1b1a0e4d481dac09bd302
           ports:
             - containerPort: 8080
