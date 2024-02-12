@@ -85,7 +85,7 @@ Reference Image
 
 The ArgoCD application file (deploy/application.yml) configures ArgoCD to track this repository. It specifies the source repository, target revision, path to deployment files, and the destination Kubernetes namespace watch.
 
-![argcd](argocd .png)
+![argcd](argocd.png)
 
   ```yaml
 apiVersion: argoproj.io/v1alpha1
